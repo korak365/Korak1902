@@ -1,0 +1,37 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Image-Text Pairs",
+            "transformation": {
+                "fields": ["imageUrl", "description", "pageTitle", "pageUrl", "imageId"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "imageUrl": {
+                        "label": "Image URL",
+                        "format": "link"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "format": "text"
+                    },
+                    "pageTitle": {
+                        "label": "Page Title",
+                        "format": "text"
+                    },
+                    "pageUrl": {
+                        "label": "Source Page",
+                        "format": "link"
+                    },
+                    "imageId": {
+                        "label": "Image ID",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

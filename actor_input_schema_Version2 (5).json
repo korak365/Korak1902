@@ -1,0 +1,62 @@
+{
+    "title": "Input schema of the Multimodal Dataset Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "Forum URLs to scrape for images and descriptions.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://example-forum.com"
+                }
+            ]
+        },
+        "maxRequestsPerCrawl": {
+            "title": "Max Requests per Crawl",
+            "type": "integer",
+            "description": "Maximum number of pages to scrape.",
+            "default": 100
+        },
+        "imageSelectors": {
+            "title": "Image CSS Selectors",
+            "type": "array",
+            "description": "CSS selectors to find images on pages (e.g., '.post-image img', 'article img').",
+            "editor": "json",
+            "default": ["img", ".image img", ".post-image", ".media-image"]
+        },
+        "descriptionSelectors": {
+            "title": "Description CSS Selectors",
+            "type": "array",
+            "description": "CSS selectors to find image descriptions or captions.",
+            "editor": "json",
+            "default": [".caption", ".image-description", "[data-description]", ".img-caption"]
+        },
+        "minImageWidth": {
+            "title": "Minimum Image Width (px)",
+            "type": "integer",
+            "description": "Filter out images smaller than this width.",
+            "default": 300
+        },
+        "minImageHeight": {
+            "title": "Minimum Image Height (px)",
+            "type": "integer",
+            "description": "Filter out images smaller than this height.",
+            "default": 300
+        },
+        "downloadImages": {
+            "title": "Download Images",
+            "type": "boolean",
+            "description": "Whether to download and store images (may increase storage).",
+            "default": true
+        },
+        "includeMetadata": {
+            "title": "Include Metadata",
+            "type": "boolean",
+            "description": "Include page title, author, date, and other metadata.",
+            "default": true
+        }
+    }
+}

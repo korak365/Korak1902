@@ -1,0 +1,21 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Multimodal Dataset Scraper",
+    "properties": {
+        "datasetOverview": {
+            "type": "string",
+            "title": "Dataset Overview",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "imagesStore": {
+            "type": "string",
+            "title": "Downloaded Images",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?keyPrefix=image-"
+        },
+        "datasetStatistics": {
+            "type": "string",
+            "title": "Dataset Statistics",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=STATISTICS"
+        }
+    }
+}
